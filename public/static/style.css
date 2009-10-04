@@ -1,0 +1,106 @@
+body {  
+    background: #afd9e7 url(gradient.png) top repeat-x;
+    line-height: 125%;
+    margin: 0;
+    padding: 0;
+}  
+
+a {
+    text-decoration: underline;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {  
+    width: 830px;
+    padding: 0px;
+    padding-top: 20px;
+}  
+
+.main {
+    -moz-border-radius: 5px;
+    background: #fff;
+    padding: 10px 15px 30px 15px;
+    border: 1px solid #eee;
+    min-height: 500px;
+}
+
+.sidebar {
+    background: #222;
+    -moz-border-radius: 5px;
+}
+
+.sidebar a {
+    color: #08f;
+    display: block;
+    border-bottom: 1px dashed #555;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+}
+
+.sidebar a:last-child {
+    border: none;
+}
+
+.sidebar .icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin: 0 8px 0 0;
+    float: left;
+}
+
+.sidebar .twitter .icon { background: url(icons/twitter.png); }
+.sidebar .blog .icon { background: url(icons/blog.png); }
+.sidebar .forum .icon { background: url(icons/comments-48.png); }
+.sidebar .install .icon { background: url(icons/plugins-48.png); }
+.sidebar .about .icon { background: url(icons/Info.png); }
+
+
+.sidebar a b {
+    display: block;
+}
+
+.sidebar a em {
+    color: white;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.sidebar a span {
+    display: block;
+}
+
+.hsidebar a:hover {
+    color: #f80;
+}
+
+a {
+    color:#3366CC;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover { 
+    color:#f80; 
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+
+img.outline {
+    outline: 1px solid #666;
+}
+
+.heading {
+    font-size: 9pt;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #333;
+}

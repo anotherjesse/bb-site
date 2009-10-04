@@ -25,6 +25,10 @@ module BookBurro
     get '/libraries' do
       erb :libraries
     end
+
+    get '/getting_started' do
+      erb :getting_started
+    end
   end
 end
 
