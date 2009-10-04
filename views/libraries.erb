@@ -1,0 +1,37 @@
+<h2>Book Burro is Extensible</h2>
+<div class="clear"></div>
+<br />
+
+<div>Adding support for your library only requires a few pieces of information for us to write the requried code.  If you are a developer you can probably write the code and email it to us and share with the world!</div>
+<br />
+<h3>If you aren't a coder:</h3>
+
+<p>Gather the following information and email <a href="mailto:anotherjesse@gmail.com">anotherjesse@gmail.com</a></p>
+
+<textarea style="height:7em">Name of library:
+Address of library:
+URL of catalog search page:
+1 or more ISBNs of books the library has:
+1 or more ISBNs of books the library doesn't have:</textarea>
+<br /><br />
+<h3>If you are a coder:</h3>
+
+<p>By creating a file called <b>custom.js</b> in the bookburro folder in your firefox profile directory, you can quickly determine the proper code to add your library.</p>
+
+<pre>var libraries = [
+  {
+     name: 'country_code.state_code.name_of_library',
+     title: 'Human Readabily Name',
+     link: 'http://example.com/?q=#{ISBN}",
+     have: ['0394839129'],
+     dont: ['0967865204'],
+     missing: 'found no matches'
+  }
+];</pre>
+
+<p>To build the final url for an ISBN on your library, the link value is modified and #{ISBN} is replaced by the ISBN of the book.</p>
+
+<p>After you create the file, each time you open the book burro panel it will reload this file.  So keep tweaking the file until it works!</p>
+
+<p>You can check out existing library entries at <a href="chrome://bookburro/content/data/libraries.js">chrome://bookburro/content/data/libraries.js</a> if have bookburro installed.</p>
+

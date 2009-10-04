@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+  <head>
+    <title>The Book Browsing Companion | Book Burro</title>
+
+    <link rel="stylesheet" href="/static/blueprint/screen.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/static/blueprint/print.css" type="text/css" media="print" />
+    <!--[if IE]>
+        <link rel="stylesheet" href="blueprint/ie.css" type="text/css" media="screen, projection" />
+    <![endif]-->
+    <link rel="stylesheet" href="/static/style.css" type="text/css" media="screen, projection" />
+  </head>
+
+  <body>
+    <div class="wholepage container">
+      <a href="/"><img src="/static/bookburro.png" border="0" align="left"/></a>
+      <br />
+      <h2 style="font-size: 1.5em; color: #444">:&nbsp; the book browsing companion</h2>
+      <div class="clear"></div>
+      <br />
+
+      <div class="span-15 main">
+        <%= yield %>
+      </div>
+
+      <div class="sidebar span-5 last">
+        <a href="/preview" class="install">
+          <span class="icon"></span>
+          <b>Getting Book Burro</b>
+          <em>Add to your web browser (flock or firefox)</em>
+          <span class="clear"></span>
+        </a>
+
+        <a href="/about" class="about">
+          <span class="icon"></span>
+          <b>About</b>
+          <em>FAQ and other information</em>
+          <span class="clear"></span>
+        </a>
+
+        <a href="/forum" class="forum">
+          <span class="icon"></span>
+          <b>Forums</b>
+          <em>Discussions, help, ideas, communities</em>
+          <span class="clear"></span>
+        </a>
+
+<!--
+        <a href="http://blog.bookburro.org" class="blog">
+          <span class="icon"></span>
+          <b>Blog</b>
+          <em>Announcements &amp; updates</em>
+          <span class="clear"></span>
+        </a>
+                    -->
+
+        <a href="http://twitter.com/BookBurro" class="twitter">
+          <span class="icon"></span>
+          <b>Twitter</b>
+          <em>Follow @bookburro and keep up to date</em>
+          <span class="clear"></span>
+        </a>
+
+      </div>
+
+
+      <div class="clear"></div>
+
+      <p>Copyright &copy; 2006-2009, <a href="http://overstimulate.com">Jesse Andrews</a>.</p>
+    </div>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      var pageTracker = _gat._getTracker("UA-50927-2");
+      pageTracker._trackPageview();
+    </script>
+  </body>
+</html>
+
