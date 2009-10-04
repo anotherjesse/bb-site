@@ -1,0 +1,5 @@
+<h2>Libraries</h2>
+
+<% @data['rows'].each do |library| %>
+  <li><a href="/libraries/<%= library['id'] %>"><%= library['value'] %></a></li>
+<% end %>
