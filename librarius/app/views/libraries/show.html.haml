@@ -1,0 +1,49 @@
+- @title = @library.name
+%a{:name => "map"}
+.column.span-24
+  - unless @library.catalog_url.blank?
+    %a{:href => @library.catalog_url, :class => 'button'}
+      %img{:src => '/images/catalog.png'}
+      Online Catalog
+  - if @library.bookburro?
+    %a#bookburro.button.library{:href => json_library_url(@library)}
+      %img{:src => '/images/add.png'}
+      Book Burro
+  - unless @library.bookmarklet.blank?
+    %a{:href => @library.bookmarklet, :class => 'button'}
+      %img{:src => '/images/script.png'}
+      Library Lookup
+  - if admin?
+    %a{:href => edit_library_path(@library), :class => 'button'}
+      %img{:src => '/images/pencil.png'}
+      Edit Library
+
+
+.column.span-14
+
+  - unless @library.location.blank?
+    %a{:name => "location"}
+    %h3 Address
+    = simple_format @library.location
+
+  - unless @library.hours.blank?
+    %a{:name => "hours"}
+    %h3 Hours
+    = simple_format @library.hours
+
+  - unless @library.contacts.blank?
+    %a{:name => "contacts"}
+    %h3 Contacts
+    = simple_format @library.contacts
+
+.column.span-10.last
+  - if @library.lat
+    %script{:type => 'text/javascript', :src => '/javascripts/libraries.js'}
+    %script{:type => 'text/javascript', :src => 'http://maps.google.com/maps?file=api&v=2&key='+$gmaps}
+    %script{:type=>'text/javascript'}
+      = 'showLibraries('+@library.id.to_s+','+Library.find(:all, :origin=>[@library.lat, @library.lng], :within=>100, :order=>'distance asc', :limit => 10).to_json+',"map","sidebar")'
+  
+    #map
+
+    %strong Libraries Near By:
+    #sidebar

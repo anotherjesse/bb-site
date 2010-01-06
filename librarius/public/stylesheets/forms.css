@@ -1,0 +1,14 @@
+label {
+    display: block;
+    padding-top: 20px;
+    color: #333;
+}
+
+textarea {
+    height: 100px;
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+}

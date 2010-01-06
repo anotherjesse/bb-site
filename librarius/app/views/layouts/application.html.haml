@@ -1,0 +1,29 @@
+!!! Strict
+%html{html_attrs}
+  %head
+    %title= @title || 'librarius'
+    %meta{ :"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8" }
+    = stylesheet_link_tag 'screen', 'plugins/buttons/buttons.css', 'forms'
+    = javascript_include_tag 'jquery-1.2.3.min.js'
+    %style{:type => 'text/css'}
+      = yield :inline_css
+
+  %body
+    .container
+      .column.span-17
+        %h2= link_to 'librarius', '/'
+        %h4= "Cataloging #{Library.count} libraries around the world"
+      .column.span-7.last
+        %form{:action => "/search", :method => "post"}
+          Search: 
+          %input{:name => "search_input"}
+          %input{:type=> "submit", :class => "button", :value => "Go"}
+      %hr
+      %h1= @title
+      = yield
+      %hr
+        %p
+          %em Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/" class="subfoot">Creative Commons Attribution 3.0 License</a>.
+        %p
+          Librarius is a service by <a href="http://overstimulate.com">Jesse Andrews</a>.
+        

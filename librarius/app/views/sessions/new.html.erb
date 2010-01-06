@@ -1,0 +1,34 @@
+<% @title = 'Login' %>
+
+<div class="column span-10">
+  <% form_tag sessions_path do -%>
+    <label for="login">Email</label><br />
+    <%= text_field_tag :login, params[:email] %>
+
+    <label for="password">Password</label><br />
+    <%= password_field_tag :password %>
+
+    <p><label><%= check_box_tag "remember_me", "1", true %> Remember me on this computer</label></p>
+
+    <p><%= submit_tag 'Login' %> or <%= link_to_function('reset password', "$('#reset-password').toggle();") %></p>
+  <% end -%>
+
+  <% form_tag users_path, :id => 'reset-password', :style => 'display:none' do -%>
+
+  <hr />
+
+  <h5>Reset password</h5>
+
+    <p>Enter your email, and a brand new login key will be sent to you.  Click the link in the email to log in, and then change your password.</p>
+    <p>If you are having problems resetting your password, email anotherjesse@gmail.com</p>
+    <p>Email: <%= text_field_tag :email, "", :size => 30 %>
+
+    <%= submit_tag "E-mail me the link" %> or <%= link_to_function('cancel', "$('#{}reset-password').hide()") %></p>
+  <% end -%>
+</div>
+<div class="column prepend-8 span-6 last">
+  <h5>No account?</h5>
+  <p>If you don't have an account, you can sign up <%= link_to 'here', signup_path %>.</p>
+</div>
+
+<%= javascript_tag "$('#login').focus();"%>

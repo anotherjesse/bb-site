@@ -1,0 +1,13 @@
+.column.span-15.prepend-1.colborder
+  %h5 What is Librarius?
+  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus ac nulla. Nulla facilisi. Integer nibh lorem, mattis vel, ullamcorper a, tempor quis, lacus. Morbi aliquam, enim in euismod iaculis, turpis urna luctus tellus, at pulvinar nunc lectus in velit. Suspendisse augue. Aenean massa nisi, adipiscing quis, fermentum ut, imperdiet sit amet, lacus. Fusce dolor nulla, iaculis a, facilisis eu, lobortis sed, nibh. Etiam ut lacus vitae lacus gravida pretium. Nullam nec sem at mi viverra euismod. Praesent facilisis, lacus nec consequat placerat, magna purus pellentesque ante, quis ultricies quam lacus sit amet ipsum. 
+  %h5 What is Library Lookup?
+  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus ac nulla. Nulla facilisi. Integer nibh lorem, mattis vel, ullamcorper a, tempor quis, lacus. Morbi aliquam, enim in euismod iaculis, turpis urna luctus tellus, at pulvinar nunc lectus in velit. Suspendisse augue. Aenean massa nisi, adipiscing quis, fermentum ut, imperdiet sit amet, lacus. Fusce dolor nulla, iaculis a, facilisis eu, lobortis sed, nibh. Etiam ut lacus vitae lacus gravida pretium. Nullam nec sem at mi viverra euismod. Praesent facilisis, lacus nec consequat placerat, magna purus pellentesque ante, quis ultricies quam lacus sit amet ipsum.
+  %h5 What is Book Burro?
+  %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus ac nulla. Nulla facilisi. Integer nibh lorem, mattis vel, ullamcorper a, tempor quis, lacus. Morbi aliquam, enim in euismod iaculis, turpis urna luctus tellus, at pulvinar nunc lectus in velit. Suspendisse augue. Aenean massa nisi, adipiscing quis, fermentum ut, imperdiet sit amet, lacus. Fusce dolor nulla, iaculis a, facilisis eu, lobortis sed, nibh. Etiam ut lacus vitae lacus gravida pretium. Nullam nec sem at mi viverra euismod. Praesent facilisis, lacus nec consequat placerat, magna purus pellentesque ante, quis ultricies quam lacus sit amet ipsum. 
+.column.span-7.last
+  %h3 Random Libraries
+  %p I should use geo-ip lookup find the 5 nearest libraries to you
+  %ul
+    - Library.find(:all, :limit => 5, :order => 'rand()').each do |library|
+      %li= link_to library.name, library

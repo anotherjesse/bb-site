@@ -1,0 +1,47 @@
+friends feed update/blog for librarius
+weekly email updates
+allow opt out of updates!
+email through gmail?
+blog for users?
+homepage:
+  what is librarius
+  what is library lookup
+  what is book burro
+good library urls
+search by location
+search by name
+make maps use topology
+allow adding a library even if the scraping rules don't yet exist?  then when it is ready it will be added
+
+IDEAS:
+
+photos (flickr or homegrown?)
+collection info
+location / address
+hours
+online catalog link
+special features (food, museums)
+contacts
+historical information
+consortiums they are a member of
+branch-libraries of this one (or is this a branch of a library)
+list of rss feeds from library
+summary from libraries (grab feeds and update this)
+
+yelp like updating of data
+book sales
+support the library (allow libraries to add donate buttons?)
+reviews
+collection size
+communitity served (drawn on map?)
+
+social features:
+add this library as my library
+events
+
+technical features:
+api to get current scrapping rules
+library lookup bookmarklet (for different countries)
+add to my bookburro
+testing data (books they have/don't - for automated daily scraping test)
+use mechanical turk to get data?

@@ -1,0 +1,6 @@
+%ul
+  - @libraries.each do |library|
+    %li
+      = link_to library.name, library
+      %em= library.location
+      = link_to 'book', library.isbn_link.gsub('#{ISBN}', '0596513984')

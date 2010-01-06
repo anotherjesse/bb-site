@@ -1,0 +1,16 @@
+<div class="span-10">
+
+  <label for="user_email">Email</label><br />
+  <%= form.text_field :email %>
+
+  <label for="display_name">Name</label><br />
+  <%= form.text_field :display_name %>
+
+  <label for="user_password">Password</label><br />
+  <%= form.password_field :password %>
+  <span class="entryhelp">(once)</span><br />
+
+  <%= form.password_field :password_confirmation %>
+  <span class="entryhelp">(and then again)</span>
+
+</div>

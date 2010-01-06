@@ -1,0 +1,20 @@
+<h1>Reset Password</h1>
+
+<p>Hi <%= @user.name %>, what do you want your new password to be?</p>
+
+<form method="post">
+  <%= token_tag %>
+  <div>
+    <p>
+      <label for="user_password">Password</label><br />
+      <%= password_field :user, :password %>
+    </p>
+
+    <p>
+      <label for="user_password_confirmation">Password Confirmation</label><br />
+      <%= password_field :user, :password_confirmation %>
+    </p>
+    
+    <input type="submit" value="Change Password" />
+  </div>
+</form>

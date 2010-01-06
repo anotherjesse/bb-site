@@ -1,0 +1,7 @@
+Hi <%= @user.display_name -%>,
+
+Someone told us you needed to reset your password.  
+
+If that was you, you can visit the link below and enter a new password:
+
+http://<%= @domain -%>/reset/<%= @user.login_key -%>

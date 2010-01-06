@@ -1,0 +1,94 @@
+/* -------------------------------------------------------------- 
+  
+   Blueprint CSS Framework Screen Styles
+   * Version:   0.6 (21.9.2007)
+   * Website:   http://code.google.com/p/blueprintcss/
+   See Readme file in this directory for further instructions.
+   
+-------------------------------------------------------------- */
+
+@import 'lib/reset.css';
+@import 'lib/typography.css';
+@import 'lib/grid.css';
+@import 'lib/forms.css';
+
+/* Plugins:
+   Additional functionality can be found in the plugins directory.
+   See the readme files for each plugin. Example:
+   @import 'plugins/buttons/buttons.css'; */
+   
+/* See the grid:
+   Uncomment the line below to see the grid and baseline.
+   .container { background: url(lib/grid.png); } */
+
+#menu {
+  margin-left: 0;
+  border-style: solid solid none solid;
+  border-color: #BCD2E6;
+  border-size: 1px;
+  border-width: 1px;
+  list-style: none;
+}
+  
+#menu li a {
+  height: 32px;
+  voice-family: "\"}\""; 
+  voice-family: inherit;
+  height: 24px;
+  text-decoration: none;
+  font-weight: bold;
+} 
+  
+#menu li a:link, #menu li a:visited {
+  color: #8BADCF;
+  display: block;
+  background:  url(/images/menu3.gif);
+  padding: 8px 0 0 10px;
+}
+  
+#menu li a:hover {
+  color: #627EB7;
+  background:  url(/images/menu3.gif) 0 -32px;
+  padding: 8px 0 0 10px;
+}
+
+.thumbnail {
+  height: 120px;
+  border: 1px solid #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.thumbnail img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.review {
+  margin-bottom: 10px;
+  background: #eee;
+}
+
+.review .date {
+  text-align: right;
+  color: #627EB7;
+}
+
+.review .author {
+  color: #3E5A8F;
+  font-weight: bold;
+}
+
+.review .comment {
+  padding: 10px;
+  background: #fff;
+}
+
+h3 {
+  color: #627EB7;
+}
+
+#map {
+  height: 300px;
+  border: 1px solid #bbb;
+}

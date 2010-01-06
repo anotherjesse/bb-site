@@ -1,0 +1,27 @@
+- @title = 'Editing ' + @library.name  
+
+.column.span-14
+  - form_for(:library, @library, :url => library_path(@library), :html=> {:method => "put"}) do |f|
+
+    %label Name
+    = f.text_field :name
+
+    %label Address
+    ~ f.text_area :location
+
+    %label Hours
+    ~ f.text_area :hours
+
+    %label Contacts
+    ~ f.text_area :contacts
+
+    %label Catalog Link
+    ~ f.text_field :catalog_url
+
+    / %label Historical Informaiton
+    / ~ f.text_area :historical_info
+    / 
+    / %label Collection Information
+    / ~ f.text_area :collection_info
+
+    %p= submit_tag
